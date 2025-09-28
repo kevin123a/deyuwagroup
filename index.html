@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>De Yuwa Global</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "EB Garamond", serif;
+      background: #fff;
+      color: #800000;
+      line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #fff;
+      padding: 16px 22px;
+      display: flex;
+      align-items: center;
+      border-bottom: 1.5px solid #d4af37;
+      justify-content: center;
+    }
+    .logo-area { display: flex; align-items: center; gap: 10px; }
+    .logo { height: 42px; width: auto; }
+    .logo-title {
+      font-family: "Cinzel Decorative", serif;
+      font-size: 22px;
+      font-weight: bold;
+      color: #800000;
+      letter-spacing: 1.5px;
+      white-space: nowrap;
+    }
+
+    .hero {
+      flex: 1;
+      text-align: center;
+      padding: 80px 6vw 50px 6vw;
+    }
+    .hero h1 {
+      font-family: "Cinzel Decorative", serif;
+      font-size: 34px;
+      margin-bottom: 24px;
+      color: #800000;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+    }
+    .hero h2 {
+      font-size: 22px;
+      margin: 16px 0;
+      color: #333;
+    }
+
+    footer {
+      background: #fff;
+      color: #800000;
+      text-align: center;
+      padding: 18px 8px;
+      font-size: 15px;
+      border-top: 1.5px solid #d4af37;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 24px; }
+      .hero h2 { font-size: 18px; }
+      .logo-title { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-area">
+      <img src="logo.png" alt="Logo De Yuwa" class="logo">
+      <h1 class="logo-title">De Yuwa Global</h1>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Selamat Datang di De Yuwa</h1>
+    <h2>De Yuwa Indonesia</h2>
+    <h2>De Yuwa Asia Tenggara</h2>
+    <h2>De Yuwa Eropa</h2>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 De Yuwa Global. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
