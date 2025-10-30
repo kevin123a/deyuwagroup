@@ -1,218 +1,191 @@
-/* ============================
-   STYLE.CSS — CLEAN MAROON VARIANT
-   ============================ */
-
+/* -------------------------
+   GLOBAL STYLES
+-------------------------- */
 :root {
-  --primary: #6B1E1E;     /* maroon lembut */
-  --primary-light: #B64B4B;
-  --text-dark: #1E1E1E;
-  --text-muted: #555;
-  --bg: #FFFFFF;
-  --bg-alt: #F8F8F8;
-  --border: #E0E0E0;
+  --primary-color: #6b0f1a; /* maroon elegan */
+  --accent-color: #a83244;  /* sedikit lebih cerah */
+  --text-color: #222;
+  --background-color: #ffffff;
+  --light-gray: #f4f4f4;
 }
 
-/* RESET & BASE */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "EB Garamond", "Times New Roman", serif;
-  background-color: var(--bg);
-  color: var(--text-dark);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
   line-height: 1.6;
 }
 
-/* CONTAINER */
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-/* HEADER */
-.site-header {
-  background: #fff;
-  border-bottom: 1px solid var(--border);
+/* -------------------------
+   HEADER
+-------------------------- */
+header {
+  background-color: var(--background-color);
+  border-bottom: 1px solid #ddd;
+  padding: 16px 0;
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
-.header-inner {
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 20px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 
 .logo {
-  font-family: "Great Vibes", cursive;
-  font-size: 26px;
-  color: var(--primary);
-  border: 2px solid var(--primary);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
 }
 
-.company {
-  font-family: "EB Garamond", serif;
-  font-size: 22px;
-  color: var(--primary);
-  margin: 0;
-}
-
-.tag {
-  font-size: 13px;
-  color: var(--text-muted);
-}
-
-/* NAVIGATION */
-.nav a {
+nav a {
   text-decoration: none;
-  color: var(--text-dark);
-  font-size: 15px;
-  margin-left: 20px;
-  transition: color 0.2s;
-}
-.nav a:hover {
-  color: var(--primary);
+  color: var(--text-color);
+  margin-left: 24px;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
-/* HERO */
+nav a:hover {
+  color: var(--primary-color);
+}
+
+/* -------------------------
+   HERO SECTION
+-------------------------- */
 .hero {
-  background: var(--bg-alt);
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+  color: white;
   text-align: center;
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
-.hero-title {
-  font-family: "Great Vibes", cursive;
-  font-size: 40px;
-  color: var(--primary);
-  margin-bottom: 10px;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  font-weight: 700;
 }
 
-.hero-desc {
-  font-size: 17px;
-  color: var(--text-muted);
+.hero p {
   max-width: 700px;
-  margin: 0 auto 30px;
+  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+  opacity: 0.95;
 }
 
-.btn {
-  display: inline-block;
-  background: var(--primary);
-  color: #fff;
+.hero .btn {
+  background-color: white;
+  color: var(--primary-color);
+  padding: 12px 28px;
+  border-radius: 4px;
   text-decoration: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background 0.3s;
+  font-weight: 600;
+  transition: background 0.2s ease;
 }
 
-.btn:hover {
-  background: var(--primary-light);
+.hero .btn:hover {
+  background-color: #f4f4f4;
 }
 
-/* SECTIONS */
+/* -------------------------
+   SECTION BASE
+-------------------------- */
 .section {
-  padding: 60px 20px;
-  background: var(--bg);
-  border-top: 1px solid var(--border);
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.section-title {
-  font-size: 22px;
-  color: var(--primary);
-  text-align: center;
+.section h2 {
+  font-size: 1.8rem;
   margin-bottom: 20px;
+  color: var(--primary-color);
 }
 
-.lead {
-  text-align: center;
+.section p {
   max-width: 800px;
   margin: 0 auto;
-  color: var(--text-muted);
-  font-size: 16px;
+  color: #444;
 }
 
-/* SERVICES */
-.services-grid {
+/* -------------------------
+   SERVICES
+-------------------------- */
+.services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
 }
 
 .card {
-  border: 1px solid var(--border);
+  background-color: var(--light-gray);
   border-radius: 8px;
-  padding: 20px;
-  background: #fff;
-  transition: box-shadow 0.3s;
+  padding: 30px 20px;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.card h4 {
-  color: var(--primary);
+.card h3 {
+  color: var(--primary-color);
   margin-bottom: 10px;
+  font-size: 1.1rem;
 }
 
-.card p {
-  color: var(--text-muted);
-  font-size: 15px;
+/* -------------------------
+   CONTACT
+-------------------------- */
+.contact {
+  background-color: var(--light-gray);
+  padding: 60px 20px;
+  text-align: center;
 }
 
-/* CONTACT */
-.contact-list {
-  list-style: none;
-  max-width: 500px;
-  margin: 0 auto;
-  color: var(--text-dark);
+.contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
 }
 
-.contact-list li {
-  margin: 10px 0;
-  font-size: 15px;
+.contact a:hover {
+  text-decoration: underline;
 }
 
-/* FOOTER */
-.site-footer {
-  background: var(--bg-alt);
-  border-top: 1px solid var(--border);
+/* -------------------------
+   FOOTER
+-------------------------- */
+footer {
+  background-color: var(--primary-color);
+  color: white;
   text-align: center;
   padding: 20px;
-  color: var(--text-muted);
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav {
-    margin-top: 10px;
-  }
-  .hero-title {
-    font-size: 32px;
-  }
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
