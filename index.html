@@ -14,25 +14,23 @@
 <body>
   <!-- HEADER -->
   <header class="main-header">
-    <div class="container header-flex">
-      <div class="logo-group">
-        <img src="logo.png" alt="De Yuwa Group" class="logo-img" />
-        <div>
-          <div class="logo-title">De Yuwa Group</div>
-          <div class="logo-subtitle">PT Sinar Langit Hanoi</div>
-        </div>
+    <div class="logo-group">
+      <img src="logo.png" alt="De Yuwa Group" class="logo-img" />
+      <div class="logo-text">
+        <div class="logo-title">De Yuwa Group</div>
+        <div class="logo-subtitle">PT Sinar Langit Hanoi</div>
       </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="https://sinarlangithanoi.my.id/service.html" class="btn-nav">Services</a>
-        <a href="https://sinarlangithanoi.my.id/contact.html" class="btn-main">Contact</a>
-      </nav>
     </div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="https://sinarlangithanoi.my.id/service.html" class="btn-outline">Services</a>
+      <a href="https://sinarlangithanoi.my.id/contact.html" class="btn-main">Contact</a>
+    </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-inner">
+    <div class="hero-inner">
       <h1 class="hero-title">Strategic Solutions for Visionary Leaders</h1>
       <p class="hero-desc">
         De Yuwa Group, bagian dari PT Sinar Langit Hanoi, menghadirkan layanan konsultasi bisnis, transformasi, dan pertumbuhan berkelanjutan untuk Anda yang ingin menjadi terdepan.
@@ -46,44 +44,39 @@
 
   <!-- ABOUT -->
   <section id="about" class="section about">
-    <div class="container">
-      <h2>About</h2>
-      <p class="about-desc">
-        De Yuwa Group adalah konsultan strategis dan manajemen bisnis yang berfokus pada efisiensi, pertumbuhan, dan keunggulan kompetitif. Kami percaya, hasil luar biasa lahir dari pendekatan yang eksklusif, personal, dan profesional — hanya untuk Anda yang mengutamakan kualitas.
-      </p>
-      <div class="stats-row">
-        <div class="stat-card">
-          <div class="stat-value">15+</div>
-          <div class="stat-label">Tahun Pengalaman</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">20%</div>
-          <div class="stat-label">Efisiensi Rata-rata</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value">3</div>
-          <div class="stat-label">Regional Hubs</div>
-        </div>
+    <h2>About</h2>
+    <p class="about-desc">
+      De Yuwa Group adalah konsultan strategis dan manajemen bisnis yang berfokus pada efisiensi, pertumbuhan, dan keunggulan kompetitif. Kami percaya, hasil luar biasa lahir dari pendekatan yang eksklusif, personal, dan profesional — hanya untuk Anda yang mengutamakan kualitas.
+    </p>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value">15+</div>
+        <div class="stat-label">Tahun Pengalaman</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">20%</div>
+        <div class="stat-label">Efisiensi Rata-rata</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">3</div>
+        <div class="stat-label">Regional Hubs</div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES (Hanya judul & deskripsi) -->
+  <!-- SERVICES -->
   <section id="services" class="section services">
-    <div class="container">
-      <h2>Signature Services</h2>
-      <p class="services-desc">
-        Solusi khusus untuk para pemimpin dan organisasi yang mengutamakan presisi, kecepatan, dan hasil nyata.
-      </p>
-    </div>
+    <h2>Signature Services</h2>
+    <p class="services-desc">
+      Solusi khusus untuk para pemimpin dan organisasi yang mengutamakan presisi, kecepatan, dan hasil nyata.
+    </p>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <div class="container footer-flex">
-      <span>© <span id="year"></span> De Yuwa Group — PT Sinar Langit Hanoi</span>
-    </div>
+    <span>© <span id="year"></span> De Yuwa Group — PT Sinar Langit Hanoi</span>
   </footer>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
