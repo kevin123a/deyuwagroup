@@ -1,103 +1,196 @@
 :root {
-  --navy: #1a2337;
-  --navy-dark: #121828;
-  --gold: #ceb36d;
-  --gold-light: #f7ecd3;
-  --white: #fff;
-  --gray: #f6f7fa;
-  --muted: #74809c;
-  --radius: 18px;
-  --transition: .18s cubic-bezier(.47,1.24,.41,.8);
+  --navy: #0e1320;
+  --navy-dark: #090d17;
+  --gold: #d4b45f;
+  --gold-light: #f8eed5;
+  --white: #ffffff;
+  --gray: #f5f6f9;
+  --muted: #7d889c;
+  --radius: 16px;
+  --transition: .25s cubic-bezier(.47,1.24,.41,.8);
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: 'Montserrat', Arial, sans-serif;
   background: var(--gray);
   color: var(--navy-dark);
-  margin: 0;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
+/* HEADER */
 .main-header {
   background: var(--white);
-  border-bottom: 1px solid #ececec;
-  box-shadow: 0 2px 8px rgba(26,35,55,0.03);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-header img {
+  height: 42px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--navy);
+  margin: 0 12px;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+.nav-links a:hover {
+  color: var(--gold);
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(120deg, var(--navy-dark) 75%, var(--gold-light) 120%);
+  background: linear-gradient(125deg, var(--navy-dark) 70%, var(--gold-light) 130%);
   color: var(--white);
-  padding: 80px 0 60px 0;
+  padding: 80px 20px;
   text-align: center;
-  position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
+
 .hero-title {
   color: var(--gold);
-  font-size: 2.2rem;
+  font-size: 2.4rem;
   font-weight: 800;
-  letter-spacing: 0.2px;
+  margin-bottom: 14px;
 }
+
 .hero-desc {
   color: var(--gold-light);
-  font-size: 1.13rem;
-  margin-bottom: 0;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
 }
-.hero-actions .btn-main {
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn-main, .btn-outline {
+  font-weight: 700;
+  padding: 12px 26px;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.btn-main {
   background: linear-gradient(90deg, var(--gold), var(--gold-light));
   color: var(--navy-dark);
+  border: none;
 }
-.hero-actions .btn-outline {
+
+.btn-main:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.btn-outline {
   border: 1.5px solid var(--gold);
   color: var(--gold);
   background: transparent;
 }
 
-/* Section */
+.btn-outline:hover {
+  background: var(--gold);
+  color: var(--navy-dark);
+}
+
+/* SECTION */
 .section {
   background: var(--white);
-  padding: 56px 0;
+  padding: 60px 5%;
   text-align: center;
 }
+
 .section h2 {
   color: var(--navy);
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   font-weight: 800;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
-.about-desc, .services-desc {
+
+.section p {
   color: var(--muted);
-  font-size: 1.06rem;
+  font-size: 1.05rem;
+  margin: 0 auto;
+  max-width: 650px;
 }
 
 .stats-row {
   display: flex;
-  gap: 28px;
+  gap: 22px;
   justify-content: center;
-  margin-top: 28px;
+  flex-wrap: wrap;
+  margin-top: 36px;
 }
+
 .stat-card {
   background: var(--gray);
   border-radius: var(--radius);
   box-shadow: 0 4px 18px rgba(26,35,55,0.05);
-  padding: 28px 18px 20px 18px;
-  min-width: 120px;
+  padding: 24px 18px;
+  flex: 1 1 140px;
   max-width: 180px;
   border-bottom: 3px solid var(--gold);
 }
+
 .stat-value {
   color: var(--navy);
   font-weight: 800;
   font-size: 1.35rem;
 }
+
 .stat-label {
   color: var(--muted);
-  font-size: 0.93rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
+/* FOOTER */
 footer {
   background: var(--navy-dark);
   color: var(--gold-light);
-  border-top: none;
   text-align: center;
+  padding: 32px 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.9rem;
+  }
+  .hero-desc {
+    font-size: 1rem;
+  }
+  .main-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-links a {
+    margin: 0 6px;
+    font-size: 0.93rem;
+  }
 }
