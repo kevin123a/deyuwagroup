@@ -356,18 +356,87 @@ footer {
 }
 
 /* Responsive */
-@media (max-width:980px) {
-  .hero-inner { flex-direction: column; align-items: flex-start; gap: 24px;}
-  .footer-flex { flex-direction: column; gap: 8px;}
-  .contact-flex { flex-direction: column; align-items: flex-start; gap: 18px;}
-  .membership-tier { flex-direction: column; align-items: center; gap: 20px;}
-  .benefit-list { flex-direction: column; align-items: center; gap: 16px;}
+@media (max-width: 980px) {
+  .header-flex, .footer-flex, .contact-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .container {
+    width: 99%;
+    padding: 0 6px;
+  }
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 48px 0 32px 0;
+  }
+  .hero-content {
+    gap: 14px;
+  }
+  .membership-tier, .benefit-list {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    display: flex !important;
+  }
+  .membership-tier .card, .benefit-list li, .service-card {
+    min-width: unset;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
-@media (max-width:600px) {
-  .header-flex, .container { width: 98%; }
-  .hero-title { font-size: 2rem; }
-  .section { padding: 36px 0 36px 0; }
-  .membership-tier .card { padding: 22px 10px;}
-  .service-card { padding: 24px 8px 20px 8px;}
-  .benefit-list li { padding: 12px 12px; min-width: 140px;}
+
+@media (max-width: 700px) {
+  .logo-title {
+    font-size: 1.15rem;
+  }
+  .logo-img {
+    width: 36px;
+    height: 36px;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .section h2 {
+    font-size: 1.45rem;
+  }
+  .btn-main, .btn-outline {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .service-card, .membership-tier .card, .benefit-list li {
+    padding: 16px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-title {
+    font-size: 0.96rem;
+  }
+  .logo-img {
+    width: 28px;
+    height: 28px;
+  }
+  .hero-title {
+    font-size: 1.05rem;
+  }
+  .section h2 {
+    font-size: 1.07rem;
+  }
+  .btn-main, .btn-outline {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+  .service-card, .membership-tier .card, .benefit-list li {
+    padding: 10px 2px;
+  }
 }
