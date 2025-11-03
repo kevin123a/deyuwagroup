@@ -7,6 +7,26 @@
   <title>De Yuwa Group</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="logo.png">
+  <script>
+    // Scroll animation trigger
+    document.addEventListener("DOMContentLoaded", function () {
+      const reveals = document.querySelectorAll(".reveal");
+      function revealOnScroll() {
+        for (let i = 0; i < reveals.length; i++) {
+          const windowHeight = window.innerHeight;
+          const elementTop = reveals[i].getBoundingClientRect().top;
+          const elementVisible = 120;
+          if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+          } else {
+            reveals[i].classList.remove("active");
+          }
+        }
+      }
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll();
+    });
+  </script>
 </head>
 
 <body>
@@ -21,15 +41,15 @@
   </header>
 
   <section class="hero" id="home">
-    <h1>De Yuwa Group</h1>
-    <p>
+    <h1 class="fade-in">De Yuwa Group</h1>
+    <p class="fade-in" style="animation-delay: 0.3s;">
       A subsidiary of <strong>PT Sinar Langit Hanoi</strong>, affiliated with <strong>Eucherius Group</strong>.  
       We provide B2B business management and consulting services across Southeast Asia —  
       with a primary focus on the Indonesian market.
     </p>
   </section>
 
-  <section class="section" id="about">
+  <section class="section reveal" id="about">
     <h2>About De Yuwa</h2>
     <p>
       De Yuwa stands as a strategic extension of PT Sinar Langit Hanoi, operating under the  
@@ -40,7 +60,7 @@
     </p>
   </section>
 
-  <section class="section" id="services">
+  <section class="section reveal" id="services">
     <h2>Our Services</h2>
     <p>
       We offer a complete range of business management and consulting solutions including  
@@ -50,7 +70,7 @@
     </p>
   </section>
 
-  <section class="contact" id="contact">
+  <section class="contact reveal" id="contact">
     <h2>Contact Us</h2>
     <div class="contact-info">
       <p>Email: <a href="mailto:cs@sinarlangithanoi.my.id">cs@sinarlangithanoi.my.id</a></p>
