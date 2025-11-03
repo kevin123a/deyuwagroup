@@ -1,5 +1,5 @@
 /* ==========================
-   De Yuwa — Corporate Elite Theme (Premium Edition)
+   De Yuwa — Dark Premium Edition
    ========================== */
 
 * {
@@ -10,28 +10,29 @@
 }
 
 body {
-  background-color: #ffffff;
-  color: #222;
+  background-color: #0A0A0A;
+  color: #E5E5E5;
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
 }
 
-/* === Background Logo Watermark (larger & elegant) === */
+/* === Background Logo Watermark (large & constant) === */
 body::before {
   content: "";
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 700px;
-  height: 700px;
+  width: 1200px;
+  height: 1200px;
   background: url("logo.png") center center no-repeat;
   background-size: contain;
   opacity: 0.08;
   filter: blur(4px);
   z-index: -1;
+  pointer-events: none;
 }
 
 /* === Smooth Fade Animations === */
@@ -57,8 +58,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 6%;
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background: rgba(10, 10, 10, 0.9);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -70,7 +71,7 @@ header img {
 
 nav a {
   text-decoration: none;
-  color: #4A0E0A;
+  color: #E5E5E5;
   font-weight: 600;
   margin-left: 25px;
   transition: color 0.3s ease, border-bottom 0.3s ease;
@@ -78,28 +79,28 @@ nav a {
 }
 
 nav a:hover {
-  color: #A47E3C; /* gold-brown premium tone */
-  border-bottom: 2px solid #A47E3C;
+  color: #D4AF37; /* gold tone */
+  border-bottom: 2px solid #D4AF37;
 }
 
 /* === Hero Section === */
 .hero {
   text-align: center;
-  padding: 120px 20px;
-  background: linear-gradient(180deg, #fff 0%, #f8f8f8 100%);
+  padding: 130px 20px;
+  background: linear-gradient(180deg, #0A0A0A 0%, #111 100%);
   animation: fadeInUp 1.5s ease forwards;
 }
 
 .hero h1 {
   font-size: 46px;
-  color: #420D09;
+  color: #F5C542;
   margin-bottom: 20px;
   letter-spacing: 1px;
 }
 
 .hero p {
   font-size: 18px;
-  color: #444;
+  color: #CCC;
   max-width: 700px;
   margin: 0 auto;
 }
@@ -108,13 +109,13 @@ nav a:hover {
 .section {
   padding: 90px 10%;
   text-align: center;
-  background: linear-gradient(180deg, #ffffff 0%, #faf8f8 100%);
+  background: transparent;
   transition: background 0.6s ease;
 }
 
 .section h2 {
   font-size: 30px;
-  color: #420D09;
+  color: #F5C542;
   margin-bottom: 20px;
   position: relative;
 }
@@ -124,14 +125,14 @@ nav a:hover {
   display: block;
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, #A47E3C, #D4AF37);
+  background: linear-gradient(90deg, #D4AF37, #8B0000);
   margin: 12px auto;
   border-radius: 2px;
 }
 
 .section p {
   font-size: 17px;
-  color: #333;
+  color: #DDD;
   max-width: 820px;
   margin: 0 auto;
   opacity: 0.95;
@@ -139,13 +140,14 @@ nav a:hover {
 
 /* === Contact Section === */
 .contact {
-  background: linear-gradient(180deg, #f6f6f6 0%, #eaeaea 100%);
+  background: #111;
   padding: 70px 10%;
   text-align: center;
+  border-top: 1px solid rgba(255, 215, 0, 0.1);
 }
 
 .contact h2 {
-  color: #420D09;
+  color: #F5C542;
 }
 
 .contact-info {
@@ -155,26 +157,27 @@ nav a:hover {
 }
 
 .contact a {
-  color: #4A0E0A;
+  color: #D4AF37;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .contact a:hover {
-  color: #A47E3C;
+  opacity: 0.8;
 }
 
 /* === Footer === */
 footer {
-  background: #420D09;
-  color: #FDC12A;
+  background: #0A0A0A;
+  color: #A47E3C;
   text-align: center;
   padding: 22px 10px;
   font-size: 15px;
   letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255, 215, 0, 0.15);
 }
 
-/* === Scroll Animation Trigger === */
+/* === Scroll Animation === */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -189,8 +192,8 @@ footer {
 /* === Responsive === */
 @media (max-width: 768px) {
   body::before {
-    width: 400px;
-    height: 400px;
+    width: 700px;
+    height: 700px;
     opacity: 0.06;
   }
 
