@@ -3,30 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="De Yuwa Group — A B2B management and business consulting firm under PT Sinar Langit Hanoi, affiliated with Eucherius Group.">
+  <meta name="description" content="De Yuwa — A B2B Management and Business Consulting company under PT Sinar Langit Hanoi, affiliated with Eucherius Group.">
   <title>De Yuwa Group</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="logo.png">
-  <script>
-    // Scroll animation trigger
-    document.addEventListener("DOMContentLoaded", function () {
-      const reveals = document.querySelectorAll(".reveal");
-      function revealOnScroll() {
-        for (let i = 0; i < reveals.length; i++) {
-          const windowHeight = window.innerHeight;
-          const elementTop = reveals[i].getBoundingClientRect().top;
-          const elementVisible = 120;
-          if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-          } else {
-            reveals[i].classList.remove("active");
-          }
-        }
-      }
-      window.addEventListener("scroll", revealOnScroll);
-      revealOnScroll();
-    });
-  </script>
 </head>
 
 <body>
@@ -41,32 +21,32 @@
   </header>
 
   <section class="hero" id="home">
-    <h1 class="fade-in">De Yuwa Group</h1>
-    <p class="fade-in" style="animation-delay: 0.3s;">
+    <h1>De Yuwa Group</h1>
+    <p class="fade-in">
       A subsidiary of <strong>PT Sinar Langit Hanoi</strong>, affiliated with <strong>Eucherius Group</strong>.  
-      We provide B2B business management and consulting services across Southeast Asia —  
-      with a primary focus on the Indonesian market.
+      We specialize in <strong>B2B management</strong> and <strong>business consulting</strong> across Southeast Asia, with a major focus on the Indonesian market.
     </p>
   </section>
 
   <section class="section reveal" id="about">
     <h2>About De Yuwa</h2>
     <p>
-      De Yuwa stands as a strategic extension of PT Sinar Langit Hanoi, operating under the  
-      affiliation of Eucherius Group. Our mission is to elevate business potential through  
-      precise management, strategic planning, and innovative solutions designed for long-term success.  
-      With a strong foundation in Southeast Asia, our primary concentration is Indonesia —  
-      the region’s most dynamic and competitive market.
+      De Yuwa operates under the strategic ecosystem of PT Sinar Langit Hanoi and Eucherius Group.  
+      We drive transformation through disciplined management frameworks and forward-thinking strategy.  
+      Our goal is to enhance competitive advantage for partners in emerging and established markets throughout Southeast Asia.
     </p>
   </section>
 
   <section class="section reveal" id="services">
     <h2>Our Services</h2>
     <p>
-      We offer a complete range of business management and consulting solutions including  
-      corporate strategy, operational restructuring, market expansion, and strategic partnerships.  
-      De Yuwa ensures that every client’s business stands ready for sustainable growth and  
-      international competitiveness.
+      We deliver tailored consulting solutions for corporations and enterprise clients, focusing on:  
+      <br><br>
+      — Business Process Optimization<br>
+      — Market Expansion Strategy<br>
+      — Partnership & Integration Management<br>
+      — Financial and Operational Restructuring<br><br>
+      De Yuwa ensures every collaboration is guided by excellence, data precision, and measurable results.
     </p>
   </section>
 
@@ -83,5 +63,20 @@
   <footer>
     © 2025 De Yuwa Group — Subsidiary of PT Sinar Langit Hanoi | Affiliated with Eucherius Group
   </footer>
+
+  <script>
+    // Simple reveal on scroll
+    const reveals = document.querySelectorAll(".reveal");
+    window.addEventListener("scroll", () => {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    });
+  </script>
 </body>
 </html>
